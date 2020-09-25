@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  VolumeViewController.swift
 //  ConversionApp
 //
 //  Created by Pratty A. Hongsyvilay on 9/25/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class VolumeViewController: UIViewController {
 
     @IBOutlet weak var fromUnit: DecimalMinusTextField!
     @IBOutlet weak var toUnit: DecimalMinusTextField!
@@ -17,9 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
-
 }
-

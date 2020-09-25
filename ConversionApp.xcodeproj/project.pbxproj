@@ -16,6 +16,8 @@
 		DD8E998E251E7DE600031DEB /* ConversionAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8E998D251E7DE600031DEB /* ConversionAppTests.swift */; };
 		DD8E9999251E7DE700031DEB /* ConversionAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8E9998251E7DE700031DEB /* ConversionAppUITests.swift */; };
 		DD9367F9251E8D7A007D653B /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9367F8251E8D7A007D653B /* DecimalMinusTextField.swift */; };
+		DD9367FB251E978C007D653B /* VolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9367FA251E978C007D653B /* VolumeViewController.swift */; };
+		DD9367FD251E97DC007D653B /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD9367FC251E97DC007D653B /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		DD8E9998251E7DE700031DEB /* ConversionAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionAppUITests.swift; sourceTree = "<group>"; };
 		DD8E999A251E7DE700031DEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD9367F8251E8D7A007D653B /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecimalMinusTextField.swift; sourceTree = "<group>"; };
+		DD9367FA251E978C007D653B /* VolumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeViewController.swift; sourceTree = "<group>"; };
+		DD9367FC251E97DC007D653B /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +109,12 @@
 				DD8E9976251E7DE500031DEB /* AppDelegate.swift */,
 				DD8E9978251E7DE500031DEB /* SceneDelegate.swift */,
 				DD8E997A251E7DE500031DEB /* ViewController.swift */,
+				DD9367FC251E97DC007D653B /* SettingsViewController.swift */,
 				DD8E997C251E7DE500031DEB /* Main.storyboard */,
 				DD8E997F251E7DE600031DEB /* Assets.xcassets */,
 				DD8E9981251E7DE600031DEB /* LaunchScreen.storyboard */,
 				DD8E9984251E7DE600031DEB /* Info.plist */,
+				DD9367FA251E978C007D653B /* VolumeViewController.swift */,
 			);
 			path = ConversionApp;
 			sourceTree = "<group>";
@@ -263,9 +269,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD8E997B251E7DE500031DEB /* ViewController.swift in Sources */,
+				DD9367FB251E978C007D653B /* VolumeViewController.swift in Sources */,
 				DD8E9977251E7DE500031DEB /* AppDelegate.swift in Sources */,
 				DD9367F9251E8D7A007D653B /* DecimalMinusTextField.swift in Sources */,
 				DD8E9979251E7DE500031DEB /* SceneDelegate.swift in Sources */,
+				DD9367FD251E97DC007D653B /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

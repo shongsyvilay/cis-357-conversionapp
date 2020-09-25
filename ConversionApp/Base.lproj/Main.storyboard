@@ -83,6 +83,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Length Conversion Calculator" id="gcp-dc-Vt3"/>
+                    <connections>
+                        <outlet property="fromLabel" destination="nPB-J0-g8H" id="019-BJ-M3o"/>
+                        <outlet property="fromUnit" destination="Pup-gw-Zfm" id="0Pz-9l-S5N"/>
+                        <outlet property="toLabel" destination="x4r-mk-iYq" id="tmn-Ke-tKA"/>
+                        <outlet property="toUnit" destination="kxW-Rt-wC1" id="tCY-Bt-2Fs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -106,10 +112,10 @@
             </objects>
             <point key="canvasLocation" x="-65.217391304347828" y="136.60714285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Volume Conversion Calculator-->
         <scene sceneID="rit-Dh-gbh">
             <objects>
-                <viewController id="TRH-9m-UwV" sceneMemberID="viewController">
+                <viewController id="TRH-9m-UwV" customClass="VolumeViewController" customModule="ConversionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eL8-kd-c4t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,27 +184,75 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ZLq-2N-vb1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="N8Y-2u-U7O"/>
+                    <navigationItem key="navigationItem" title="Volume Conversion Calculator" id="N8Y-2u-U7O"/>
+                    <connections>
+                        <outlet property="fromLabel" destination="iJb-LI-btF" id="PH0-yj-0Ld"/>
+                        <outlet property="fromUnit" destination="jEJ-n8-k1v" id="QLF-D5-zG6"/>
+                        <outlet property="toLabel" destination="BNY-DB-aeu" id="Xu2-sy-nRn"/>
+                        <outlet property="toUnit" destination="iDx-MP-4YY" id="zvg-GE-43K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThC-Jm-dvb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1700" y="137"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="J3f-gE-XaR">
             <objects>
-                <viewController id="M1I-WF-FdR" sceneMemberID="viewController">
+                <viewController id="M1I-WF-FdR" customClass="SettingsViewController" customModule="ConversionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cTF-qZ-SIE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOo-nb-bIZ">
+                                <rect key="frame" x="352" y="186" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From Units: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deR-nG-Qc5">
+                                <rect key="frame" x="20" y="186" width="93" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To Units:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgU-Hq-a0I">
+                                <rect key="frame" x="20" y="248" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pC-s5-7dR">
+                                <rect key="frame" x="352" y="248" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CPY-qy-x2t">
+                                <rect key="frame" x="0.0" y="525" width="414" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="s80-EM-n8a"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GFp-wT-YkU"/>
+                    <navigationItem key="navigationItem" title="Settings" id="GFp-wT-YkU">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="MNJ-lT-1HG"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="764-Zu-TI9"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="fromUnit" destination="kOo-nb-bIZ" id="hdb-6C-Mn6"/>
+                        <outlet property="picker" destination="CPY-qy-x2t" id="TG3-PN-SaY"/>
+                        <outlet property="toUnit" destination="8pC-s5-7dR" id="htY-CK-LSc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="snb-h1-z2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="963"/>
+            <point key="canvasLocation" x="1298.5507246376812" y="962.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="c2i-Lp-dM6">
