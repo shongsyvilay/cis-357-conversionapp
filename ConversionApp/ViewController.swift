@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func clearFields(_ sender: UIButton) {
+        fromUnit.text = ""
+        toUnit.text = ""
+    }
+    
 }
 

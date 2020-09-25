@@ -17,7 +17,10 @@ class VolumeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.hidesBackButton = true
+    }
+    @IBAction func clearFields(_ sender: UIButton) {
+        fromUnit.text = ""
+        toUnit.text = ""
     }
 }
