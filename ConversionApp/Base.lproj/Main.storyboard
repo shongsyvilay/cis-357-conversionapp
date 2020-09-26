@@ -34,12 +34,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="clearOther:" destination="BYZ-38-t0r" eventType="touchDown" id="8Um-Hu-zkG"/>
+                                </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter length " textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxW-Rt-wC1" customClass="DecimalMinusTextField" customModule="ConversionApp" customModuleProvider="target">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter length " textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kxW-Rt-wC1" customClass="DecimalMinusTextField" customModule="ConversionApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="319" width="293" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="clearOther:" destination="BYZ-38-t0r" eventType="touchDown" id="tMr-78-lf0"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPB-J0-g8H">
                                 <rect key="frame" x="321" y="200" width="43" height="21"/>
@@ -53,6 +59,9 @@
                                 <rect key="frame" x="20" y="419" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateConversion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ANf-ex-dvE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy6-rx-aYw">
                                 <rect key="frame" x="189" y="419" width="36" height="30"/>
@@ -150,17 +159,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter volume" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iDx-MP-4YY" customClass="DecimalMinusTextField" customModule="ConversionApp" customModuleProvider="target">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter volume" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iDx-MP-4YY" customClass="DecimalMinusTextField" customModule="ConversionApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="319" width="293" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="clearOther:" destination="TRH-9m-UwV" eventType="touchDown" id="E7s-Mb-Boz"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Volume" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jEJ-n8-k1v" customClass="DecimalMinusTextField" customModule="ConversionApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="203" width="293" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="clearOther:" destination="TRH-9m-UwV" eventType="touchDown" id="REs-Jc-1Xi"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gallons" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJb-LI-btF">
                                 <rect key="frame" x="321" y="210" width="57" height="21"/>
@@ -173,6 +188,9 @@
                                 <rect key="frame" x="173" y="439" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateConversion:" destination="TRH-9m-UwV" eventType="touchUpInside" id="vsP-Ty-6iw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bee-wB-M2K">
                                 <rect key="frame" x="189" y="515" width="36" height="30"/>
@@ -186,9 +204,12 @@
                                 <rect key="frame" x="186" y="477" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mode"/>
+                                <connections>
+                                    <action selector="toLenghConv:" destination="TRH-9m-UwV" eventType="touchUpInside" id="sW3-cs-xG5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Liters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNY-DB-aeu">
-                                <rect key="frame" x="321" y="324" width="43" height="21"/>
+                                <rect key="frame" x="321" y="324" width="57" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -225,7 +246,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1700" y="137"/>
+            <point key="canvasLocation" x="1744.9275362318842" y="136.60714285714286"/>
         </scene>
         <!--Settings-->
         <scene sceneID="J3f-gE-XaR">
@@ -256,7 +277,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pC-s5-7dR">
+                            <label opaque="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pC-s5-7dR">
                                 <rect key="frame" x="255" y="248" width="139" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -276,8 +297,12 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="GFp-wT-YkU">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="MNJ-lT-1HG"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="764-Zu-TI9"/>
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="rtg-u4-aru"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="764-Zu-TI9">
+                            <connections>
+                                <action selector="saveToDest:" destination="M1I-WF-FdR" id="Tad-oF-fIX"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="fromUnit" destination="kOo-nb-bIZ" id="Rfd-Zu-gAg"/>

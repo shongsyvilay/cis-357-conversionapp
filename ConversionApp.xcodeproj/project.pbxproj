@@ -112,11 +112,11 @@
 				DD8E9978251E7DE500031DEB /* SceneDelegate.swift */,
 				DD8E997A251E7DE500031DEB /* ViewController.swift */,
 				DD9367FC251E97DC007D653B /* SettingsViewController.swift */,
+				DD9367FA251E978C007D653B /* VolumeViewController.swift */,
 				DD8E997C251E7DE500031DEB /* Main.storyboard */,
 				DD8E997F251E7DE600031DEB /* Assets.xcassets */,
 				DD8E9981251E7DE600031DEB /* LaunchScreen.storyboard */,
 				DD8E9984251E7DE600031DEB /* Info.plist */,
-				DD9367FA251E978C007D653B /* VolumeViewController.swift */,
 			);
 			path = ConversionApp;
 			sourceTree = "<group>";

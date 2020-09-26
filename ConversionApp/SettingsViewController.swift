@@ -18,11 +18,11 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var fromUnit: UILabel!
     
     var pickerData: [String] = [String]()
-    var selection: String = ""
     var delegate : UnitSelectionViewControllerDelegate?
     var unitType: String?
     var fromOld: String?
     var toOld: String?
+    var whichLabel: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,9 @@ class SettingsViewController: UIViewController {
     
     @objc func showPicker(_ sender: UITapGestureRecognizer) {
         picker.isHidden = false
-        
+        if sender.view?.tag == 1 {
+            whichLabel = 1
+        }
     }
     
     func setupLabelTap(label: UILabel) {
@@ -54,6 +56,19 @@ class SettingsViewController: UIViewController {
     @IBAction func hidePicker(_ sender: UITapGestureRecognizer) {
         picker.isHidden = true
     }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let d = self.delegate {
+            d.settingsChanged(fromUnit: fromUnit.text!, toUnits: toUnit.text!)
+        }
+    }
+    
+    @IBAction func saveToDest(_ sender: UIBarButtonItem) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -70,7 +85,11 @@ extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.selection = self.pickerData[row]
+        if whichLabel == 1 {
+            toUnit.text = self.pickerData[row]
+        } else {
+            fromUnit.text = self.pickerData[row]
+        }
     }
     
 }
