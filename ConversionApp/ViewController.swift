@@ -17,13 +17,28 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        navigationItem.hidesBackButton = true
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "settingsSegue" {
+            if let dest = segue.destination as? SettingsViewController {
+                dest.unitType = "length"
+                dest.fromOld = fromLabel.text!
+                dest.toOld = toLabel.text!
+            }
+        }
+    }
+    
     @IBAction func clearFields(_ sender: UIButton) {
         fromUnit.text = ""
         toUnit.text = ""
     }
+    
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    
     
 }
 
