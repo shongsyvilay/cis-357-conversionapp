@@ -22,9 +22,21 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var pickerRect = picker.frame
+        pickerRect.origin.x = 0
+        pickerRect.origin.y = 525
+        picker.frame = pickerRect
         pickerData = ["Yards", "Meters", "Miles"]
         picker.dataSource = self
         picker.delegate = self
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showPicker(_:)))
+        fromUnit.addGestureRecognizer(tap)
+        toUnit.addGestureRecognizer(tap)
+    }
+    
+    @objc func showPicker(_ sender: UITapGestureRecognizer) {
+        print("showing")
+        picker.isHidden = false
     }
 }
 
@@ -42,7 +54,7 @@ extension SettingsViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selfselection = self.pickerData[row]
+        self.selection = self.pickerData[row]
     }
     
 }
